@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<title>Insert title here</title>
+
+<script type="text/javascript" src="/JavaScriptStudy/util/util.js"></script>
+<script type="text/javascript">
+
+	function myFun() {
+		var str = "KH정보교육원";
+		alert(str);
+		
+		var result = str.substring(2, 4); // "KH정보교육원" 의 2번째 인덱스인 "정" 부터
+							 // "KH정보교육원" 의 4번째 인덱스인 "교" 앞! 까지
+		
+		alert(result);
+		
+		str = "윤찬영배은정만만세!!!";
+		
+		alert(str);
+		
+		result = str.substr(3, 6);
+		alert(result);
+		
+		str = "1234";
+		alert("str의 타입 : " + typeof str);	// string
+		
+		str += 1;	 // str = str + 1;  ==> str이 string 타입이므로 + 는 문자열 결합!
+		alert(str);  // 12341
+		
+		// 문자열을 숫자타입으로 바꾼다.
+		// 숫자타입이 정수냐? 실수냐? 에 따라 사용되어지는 메소드는 다르다.
+		// parseInt()    --> 문자열을 정수로 변환
+		// parseFlloat() --> 문자열을 실수로 변환
+				
+		str = "1234";
+		var num = parseInt(str);
+		alert("num의 데이터 타입 : " + typeof num);  // number
+		
+		num += 1;
+		alert(num);   // 1235
+		
+	}
+
+	function myfunChkRRN(RRN) {
+		var result = funChkRRN(RRN);
+		alert(result);
+	}
+	
+	function mydelComma(str) {
+		var result = delComma(str);
+		alert(result);
+	}
+	
+	function myaddComma(num) {
+		var result = addComma(num);
+		alert(result);
+	}
+</script>
+
+</head>
+<body>
+
+	<button type="button" id="btnOK" onclick="myFun();">확인</button>
+	<button type="button" id="btnRRN" onclick="myfunChkRRN('9204301249516');">주민번호검사</button>
+	<button type="button" id="btnRRN" onclick="mydelComma('1,234,567,890');">콤마제거</button>
+	<button type="button" id="btnRRN" onclick="myaddComma('1234567890');">콤마추가</button>
+
+</body>
+</html>
